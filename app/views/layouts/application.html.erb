@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saarang</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark text-light navbar-main">
+        <div class="container">
+            <h3 class="website-brand mr-5">Fifa</h3>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav dropdown">
+                    <li class="nav-item"><a href="#" class="text-light nav-link">Learning Tracks</a></li>
+                    <li class="nav-item"><a href="#" class="text-light nav-link">Trainers</a></li>
+                    <li class="nav-item"><a href="#" class="text-light nav-link">How tos</a></li>
+                    <li class="nav-item"><a href="#" class="text-light nav-link">Discussion Forum</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto navbar-signup">
+                    <li class="nav-item"><a href="#" class="btn"><i class="fas fa-edit navbar-fa-edit pr-1"></i>Sign Up</a></li>
+                </ul>
+            </div>       
+        </div>
+    </nav>
+
+    <%= yield %>
+
+    <div id="top-footer">    
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <h3>Fifa</h3>
+                    <small>The most concise screencasts for serious traders</small>
+                    <p class="logo-content mt-2">MQLCasts2017. All rights reserved.</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <h3>LEARN</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="text-light">Series</a></li>
+                        <li><a href="#" class="text-light">Plans</a></li>
+                        <li><a href="#" class="text-light">Sign up</a></li>
+                        <li><a href="#" class="text-light">Sign in</a></li>      
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-2">
+                    <h3>EXTRAS</h3>
+                    <ul class="footer-list">
+                        <li><a href="#" class="text-light">About</a></li>
+                        <li><a href="#" class="text-light">FAQ</a></li>
+                        <li><a href="#" class="text-light">Terms</a></li>
+                        <li><a href="#" class="text-light">Community</a></li>
+                        <li><a href="#" class="text-light">Tutorials</a></li>      
+                    </ul>
+                </div>
+                     
+                <div class="col-md-2 col-sm-3 text-center">
+                    <i class="fab fa-twitter fa-lg twitter-icon"></i>
+                    <i class="fab fa-facebook-f fa-2x facebook-icon"></i>
+                </div>      
+            </div>
+        </div>
+    </footer>
+    
+    <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
+    <Script src = "js/jquery.js"> </script>
+    <Script src = "js/bootstrap.js"> </script>
+  </body>
+</html>
