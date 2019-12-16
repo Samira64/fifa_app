@@ -32,8 +32,6 @@ $athiti-font-family: 'Athiti', sans-serif;
 
 @mixin h-center-align {
     position: absolute;
-    bottom: 0px;
-    bottom: -18px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -41,21 +39,24 @@ $athiti-font-family: 'Athiti', sans-serif;
 
 .navbar-main {
     background: linear-gradient(145deg, $bg-purple 0%, $bg-purple 40%, $bg-blue 80%, $bg-blue 100%);  
-   .navbar-signup {
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 10px;
-        li a {
-            color: white;
-            transition: none;          
-        } 
+    .navbar-signup {
+        border: 1px solid white;
+        border-radius: 5px;
+        margin: 10px;
         &:hover {
             border-color: $dark-blue;
-            a {
-             color: $dark-blue;
-            }
-        }   
-   }
+        }
+        li a {
+            color: white;
+            transition: none;  
+            &:hover {         
+            color: $dark-blue;         
+            }           
+        }         
+    }
+    .nav-item:hover {
+        text-decoration: underline;
+    }
 }
 
 .hero {
@@ -320,7 +321,7 @@ $athiti-font-family: 'Athiti', sans-serif;
         vertical-align: top;
     }
     .facebook-icon {
-        background-color: 23599C;
+        background-color: #23599C;
         text-align: center;
         padding: 10px 20px;
         border: 1px solid white;
