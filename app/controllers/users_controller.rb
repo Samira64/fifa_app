@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
-    def index
-        puts "Hi dear Sam"
-    end
 
-    def new
+    def edit
+       @user = User.new 
     end
 
 end
