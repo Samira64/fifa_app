@@ -1,4 +1,4 @@
-//colors
+ //colors
 $bg-blue: #10d3da;
 $bg-purple: #636ef6;
 $dark-blue: #36316B;
@@ -15,6 +15,7 @@ $bg-xlight-yellow: #FDC338;
 $bg-light-yellow: #FBBA31;
 $bg-dark-yellow: #F6AB27;
 $bg-xdark-yellow: #F29D1C;
+$polygon-blue: #62D8F4;
 //fonts
 $quicksand-font-family: 'Quicksand', sans-serif;
 $tajaval-font-family: 'Tajawal', sans-serif;
@@ -31,8 +32,6 @@ $athiti-font-family: 'Athiti', sans-serif;
 
 @mixin h-center-align {
     position: absolute;
-    bottom: 0px;
-    bottom: -18px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -40,21 +39,24 @@ $athiti-font-family: 'Athiti', sans-serif;
 
 .navbar-main {
     background: linear-gradient(145deg, $bg-purple 0%, $bg-purple 40%, $bg-blue 80%, $bg-blue 100%);  
-   .navbar-signup {
-    border: 1px solid white;
-    border-radius: 5px;
-    margin: 10px;
-        li a {
-            color: white;
-            transition: none;          
-        } 
+    .navbar-signup {
+        border: 1px solid white;
+        border-radius: 5px;
+        margin: 10px;
         &:hover {
             border-color: $dark-blue;
-            a {
-             color: $dark-blue;
-            }
-        }   
-   }
+        }
+        li a {
+            color: white;
+            transition: none;  
+            &:hover {         
+            color: $dark-blue;         
+            }           
+        }         
+    }
+    .nav-item:hover {
+        text-decoration: underline;
+    }
 }
 
 .hero {
@@ -280,6 +282,8 @@ $athiti-font-family: 'Athiti', sans-serif;
     }
 }
 .main-footer {
+    position: relative;
+    overflow: hidden;
     min-height: 250px;
     padding: 50px;
     background: linear-gradient(145deg, #636ef6 0%, #636ef6 40%, #10d3da 80%, #10d3da 100%); 
@@ -300,6 +304,13 @@ $athiti-font-family: 'Athiti', sans-serif;
             padding: 0;
         }
     }
+    .footer-svg {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: -100px;
+    }
     .twitter-icon {
         padding: 18px;
         margin-bottom: 5px;
@@ -310,7 +321,7 @@ $athiti-font-family: 'Athiti', sans-serif;
         vertical-align: top;
     }
     .facebook-icon {
-        background-color: 23599C;
+        background-color: #23599C;
         text-align: center;
         padding: 10px 20px;
         border: 1px solid white;
@@ -345,6 +356,12 @@ div#top-footer {
             text-align: justify;
             font-size: 0.5rem;
         }      
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main-footer .footer-svg {
+        display: block;
     }
 }
 
